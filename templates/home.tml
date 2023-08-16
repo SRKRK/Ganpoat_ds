@@ -82,9 +82,7 @@
 
             <label for="timeline_days">timeline_days:</label>
             <input type="text" id="timeline_days" name="timeline_days" placeholder="Enter timeline_days" required>
-
-            <!-- Repeat the above label and input for other fields -->
-            
+                
             <label for="Incentive_in_USD">Incentive_in_USD:</label>
             <input type="text" id="Incentive_in_USD" name="Incentive_in_USD" placeholder="Enter Incentive_in_USD" required>
 
