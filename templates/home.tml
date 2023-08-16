@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API Prediction</title>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Arimo|Hind:300|Open+Sans+Condensed:300" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arimo', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .prediction-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .prediction-form h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .prediction-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .prediction-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .prediction-form button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .prediction-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .prediction-result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="prediction-form">
+        <h1>Inhouse Complete Prediction</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+            <label for="InhouseTQ">InhouseTQ</label>
+            <input type="text" name="InhouseTQ" placeholder="Enter InhouseTQ" required>
+
+            <label for="IR_Perct">IR_Perct</label>
+            <input type="text" name="IR_Perct" placeholder="Enter IR_Perct" required>
+
+            <!-- Repeat the above label and input for other fields -->
+
+            <button type="submit">Predict</button>
+        </form>
+        <div class="prediction-result">
+            {{prediction_text}}
+        </div>
+    </div>
+</body>
+
+</html>
