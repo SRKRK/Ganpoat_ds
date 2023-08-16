@@ -4,7 +4,7 @@ from flask.json import jsonify
 import numpy as np
 import pandas as pd
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Load the model
 dtr = pkl.load(open('regmodel.pkl', 'rb'))
