@@ -1,9 +1,11 @@
-import sys
-import json
+import pickle
+from flask import Flask, request, app, render_template
+from flask.json import jsonify
 import numpy as np
-import pickle as pkl
-from flask import Flask, request, jsonify, render_template
+import pandas as pd
+
 app = Flask(_name_)
+
 # Load the model
 dtr = pkl.load(open('regmodel.pkl', 'rb'))
 
