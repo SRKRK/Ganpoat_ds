@@ -7,7 +7,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the model
-dtr = pkl.load(open('regmodel.pkl', 'rb'))
+dtr = pickle.load(open('regmodel.pkl', 'rb'))
 
 @app.route('/')
 def home():
