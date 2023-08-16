@@ -28,6 +28,5 @@ def predict():
     output = dtr.predict(final_input)[0]
     return render_template("home.html",prediction_text = "The internal feasibility value is {}".format(output))
 
-
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug=True)
